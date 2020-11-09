@@ -6,7 +6,7 @@ from django.views.generic import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
-@login_required(login_url="user:login")
+
 def home_view(request):
     books = Book.objects.all()
     context = {"books": books}
